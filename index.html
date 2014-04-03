@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQM latest - issue template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="http://jquery-mobile.10.0.1.29.xip.io/css/themes/default/jquery.mobile.css"> 
+  <script src="http://code.jquery.com/jquery-1.10.1.js"></script> 
+  <script src="http://jquery-mobile.10.0.1.29.xip.io/js/"></script>
+  <script src="jquery.mobile.onpage.js"></script>
+  <script>
+    // JS
+    $( document ).onPage( "transition show hide beforetransition change beforeload" , "#page-1", function( event, ui ){
+      console.log( event );
+      console.log( ui );
+    });
+    $(function(){
+      console.log( "foo" );
+      $("body").pagecontainer({"beforeload": function(){
+        console.log( "clicky" );
+      }});
+      $( "#page-2" ).onPage( "show", function(){
+        alert();
+      })
+    });
+  </script>
+  <style>
+    #edit-with-js-bin { display: none !important; }
+  </style>
+</head>
+<body>
+ 
+  <div data-role="page" id="page-1">
+  
+    <div data-role="header">
+      <h1>Issue template</h1>
+    </div><!-- /header -->
+    
+    <div data-role="content" id="content">
+      <a href="foo.html">test</a>
+      <a href="#page-2">page2</a>
+      <p>See the <a href="https://github.com/jquery/jquery-mobile/blob/master/CONTRIBUTING.md#issues" target="_blank">Contributing Guidelines</a> for instructions.</p>
+      <p>Use the "Live preview" for testing: click on the arrow in the top right corner of the "Output" panel.</p>
+      
+    </div><!-- /content -->
+  <div id="tabs">
+  <ul>
+    <li><a href="#fragment-1">One</a></li>
+    <li><a href="#fragment-2">Two</a></li>
+    <li><a href="#fragment-3">Three</a></li>
+  </ul>
+  <div id="fragment-1">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+  <div id="fragment-2">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+  <div id="fragment-3">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+</div>
+  </div><!-- /page -->
+<div id="page-2"><a href="#page-1">page1</a></div>
+</body>
+</html>

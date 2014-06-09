@@ -1,4 +1,31 @@
-(function( $, undefined ) {
+/*!
+ * jQuery Mobile onPage
+ * http://uglymongrel.com.com
+ *
+ * Copyright 2014 Alexander Schmitz and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.uglymongrel.com.com/jquery-mobile-onpage/
+ */
+//>>excludeStart("jqmBuildExclude", pragmas.jqmBuildExclude);
+//>>description: A utility for easy binding to page events which uses same api as old page events
+//>>label: onPage / offPage
+//>>group: Utilities
+//>>excludeEnd("jqmBuildExclude");
+(function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+
+	// AMD. Register as an anonymous module.
+	define([
+		"jquery",
+	], factory );
+  } else {
+
+	// Browser globals
+	factory( jQuery );
+  }
+}(function( $ ) {
 	var globalPagecontainer,
 		events = {},
 		from = [
@@ -103,4 +130,8 @@
 			});
 		}
 	};
-})( jQuery, this );
+
+return $.fn;
+
+}));
+

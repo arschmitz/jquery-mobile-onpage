@@ -2,7 +2,7 @@
   "name": "jquery-mobile-onpage",
   "title": "jQuery Mobile onPage",
   "description": "Utility for binding jQuery mobile 1.3 style page events",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "http://uglymongrel.com",
   "author": {
     "name": "Alexander Schmitz and other contributors",
